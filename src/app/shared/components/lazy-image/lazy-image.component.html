@@ -1,0 +1,15 @@
+<div class="d-flex">
+  <img
+    [src]="url"
+    class="card-img-top img animate__animated animate__fadeIn"
+    [alt]="alt"
+    (load)="onLoader()"
+    [ngStyle]="{ display: hasLoader ? '' : 'none' }"
+  />
+  <img
+    [src]="'assets/loader.svg'"
+    class="card-img-top img"
+    [alt]="alt"
+    *ngIf="!hasLoader"
+  />
+</div>
